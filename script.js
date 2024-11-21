@@ -31,17 +31,20 @@ function createTaskElement(text, completed = false) {
 
     const completeBtn = document.createElement('button');
     completeBtn.className = 'complete-btn';
-    completeBtn.textContent = 'Complete';
+    completeBtn.textContent = '✓';
+    completeBtn.title = 'Mark as Complete';
     completeBtn.addEventListener('click', () => toggleComplete(li, text));
 
     const editBtn = document.createElement('button');
     editBtn.className = 'edit-btn';
-    editBtn.textContent = 'Edit';
+    editBtn.textContent = '✎';
+    editBtn.title = 'Edit Task';
     editBtn.addEventListener('click', () => editTask(li, span, text));
 
     const deleteBtn = document.createElement('button');
     deleteBtn.className = 'delete-btn';
-    deleteBtn.textContent = 'Delete';
+    deleteBtn.textContent = '🗑';
+    deleteBtn.title = 'Delete Task';
     deleteBtn.addEventListener('click', () => deleteTask(li, text));
 
     actions.appendChild(completeBtn);
